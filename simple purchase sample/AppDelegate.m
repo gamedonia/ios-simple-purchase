@@ -18,7 +18,16 @@
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [Gamedonia initialize:@"" secret:@"" apiServerUrl:@"http://api.gamedonia.com" apiVersion:@"v1"];
+    NSString *apiKey = @"";
+    NSString *secret = @"";
+    
+    if ( [apiKey isEqual: @""] || [secret isEqual: @""] ) {
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Configuration error" message:@"Api key/Secret are empty. Check the README.txt for more info." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    [Gamedonia initialize:apiKey secret:secret apiServerUrl:@"http://api.gamedonia.com" apiVersion:@"v1"];
     
     return YES;
 }

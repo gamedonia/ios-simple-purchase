@@ -165,6 +165,12 @@ const float GAS_DRIVE_CONSUMPTION_REFILL = 0.25;
 
 - (IBAction) clickBuyGas:(id)sender {
     
+#if (TARGET_IPHONE_SIMULATOR)
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Purchases won't work on the simulator. Use a device.\nCheck the README.txt for more info." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    return;
+#endif
+    
     if(_currentGas < 1.0f){
         
         [[Gamedonia purchase] buyProductIdentifier:@"gas"];
@@ -185,7 +191,7 @@ const float GAS_DRIVE_CONSUMPTION_REFILL = 0.25;
     if (transaction.success) {
         
         [self updateGas:GAS_DRIVE_CONSUMPTION_REFILL];
-    
+        
         [self printText:@"GAS refilled!"];
     }
 }

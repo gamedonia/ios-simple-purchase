@@ -19,6 +19,7 @@
 		93AEE0531AC425CB0090F562 /* button_green_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE04D1AC425CB0090F562 /* button_green_normal.png */; };
 		93AEE0541AC425CB0090F562 /* button_green_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE04E1AC425CB0090F562 /* button_green_pressed.png */; };
 		93AEE0551AC425CB0090F562 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE04F1AC425CB0090F562 /* car.png */; };
+		93D351081B135D5D002F2D86 /* GamedoniaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D351071B135D5D002F2D86 /* GamedoniaSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		93AEE04D1AC425CB0090F562 /* button_green_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_green_normal.png; sourceTree = "<group>"; };
 		93AEE04E1AC425CB0090F562 /* button_green_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_green_pressed.png; sourceTree = "<group>"; };
 		93AEE04F1AC425CB0090F562 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		93D351071B135D5D002F2D86 /* GamedoniaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GamedoniaSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93030AF11AAD89CE000D9A7E /* StoreKit.framework in Frameworks */,
+				93D351081B135D5D002F2D86 /* GamedoniaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 		93030AF41AAD8A0D000D9A7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93D351071B135D5D002F2D86 /* GamedoniaSDK.framework */,
 				93030AF01AAD89CE000D9A7E /* StoreKit.framework */,
 			);
 			name = Frameworks;
